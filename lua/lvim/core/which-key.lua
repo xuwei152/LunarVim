@@ -34,10 +34,15 @@ M.config = function()
         -- ["<cr>"] = "RET",
         -- ["<tab>"] = "TAB",
       },
+
+      preset = "helix",
+      sort = {"alphanum"},
+      -- sort = { "local", "order", "group", "alphanum", "mod" },
       icons = {
         breadcrumb = lvim.icons.ui.DoubleChevronRight, -- symbol used in the command line area that shows your active key combo
         separator = lvim.icons.ui.BoldArrowRight, -- symbol used between a key and it's label
         group = lvim.icons.ui.Plus, -- symbol prepended to a group
+        mappings = true,
       },
       popup_mappings = {
         scroll_down = "<c-d>", -- binding to scroll down inside the popup
