@@ -184,6 +184,7 @@ local core_plugins = {
   -- Whichkey
   {
     "folke/which-key.nvim",
+    branch = "main",
     dependencies = { "echasnovski/mini.nvim", "nvim-tree/nvim-web-devicons" },
     config = function()
       require("lvim.core.which-key").setup()
