@@ -271,6 +271,7 @@ local core_plugins = {
   -- Debugger user interface
   {
     "rcarriga/nvim-dap-ui",
+    dependencies = { 'mfussenegger/nvim-dap', 'theHamsta/nvim-dap-virtual-text', 'nvim-neotest/nvim-nio' },
     config = function()
       require("lvim.core.dap").setup_ui()
     end,
