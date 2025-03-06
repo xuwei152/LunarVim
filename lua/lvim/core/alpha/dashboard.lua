@@ -135,6 +135,7 @@ function M.get_sections()
         lvim.icons.ui.Gear .. "  Configuration",
         "<CMD>edit " .. require("lvim.config"):get_user_config_path() .. " <CR>",
       },
+      { "s", "  Open last session", "<CMD>echo \"Loading last session\" | lua require(\"persistence\").load({ last = true })<CR>" },
       { "q", lvim.icons.ui.Close .. "  Quit", "<CMD>quit<CR>" },
     },
   }
