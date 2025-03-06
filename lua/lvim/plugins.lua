@@ -258,6 +258,7 @@ local core_plugins = {
   -- Debugging
   {
     "mfussenegger/nvim-dap",
+    cmd = "DapToggleBreakpoint",
     config = function()
       require("lvim.core.dap").setup()
     end,
