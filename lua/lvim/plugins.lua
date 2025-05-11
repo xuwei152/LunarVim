@@ -329,8 +329,11 @@ local core_plugins = {
 
   {
     "lukas-reineke/indent-blankline.nvim",
+    main = "ibl",
     config = function()
-      require("lvim.core.indentlines").setup()
+      -- require("lvim.core.indentlines").setup()
+
+      require("ibl").setup {}
     end,
     event = "User FileOpened",
     enabled = lvim.builtin.indentlines.active,
