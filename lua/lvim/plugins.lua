@@ -87,6 +87,8 @@ local core_plugins = {
   },
   {
     "L3MON4D3/LuaSnip",
+    branch= "master",
+    version = "false",
     config = function()
       local utils = require "lvim.utils"
       local paths = {}
@@ -185,6 +187,7 @@ local core_plugins = {
   {
     "folke/which-key.nvim",
     branch = "main",
+    version = false,
     dependencies = { "echasnovski/mini.nvim", "nvim-tree/nvim-web-devicons" },
     config = function()
       require("lvim.core.which-key").setup()
