@@ -39,7 +39,7 @@ end
 _G.load_config = function()
   vim.lsp.set_log_level "trace"
   require("vim.lsp.log").set_format_func(vim.inspect)
-  local nvim_lsp = require "lspconfig"
+  local nvim_lsp = vim.lsp.config
   local on_attach = function(_, bufnr)
     local function buf_set_option(k, v)
       vim.api.nvim_set_option_value(k, v, { buf = bufnr })

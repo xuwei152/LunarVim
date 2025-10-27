@@ -25,7 +25,7 @@ local add_packages_to_workspace = function(packages, config)
   end
 end
 
-local lspconfig = require "lspconfig"
+local lspconfig = vim.lsp.config
 
 local make_on_new_config = function(on_new_config, _)
   return lspconfig.util.add_hook_before(on_new_config, function(new_config, _)

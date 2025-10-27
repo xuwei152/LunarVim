@@ -89,7 +89,7 @@ end
 function M.setup()
   Log:debug "Setting up LSP support"
 
-  local lsp_status_ok, _ = pcall(require, "lspconfig")
+  local lsp_status_ok = vim.lsp and vim.lsp.config ~= nil
   if not lsp_status_ok then
     return
   end
