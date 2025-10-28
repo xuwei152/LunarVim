@@ -17,7 +17,7 @@ local core_plugins = {
       settings.current.automatic_installation = false
     end,
     lazy = true,
-    event = "User FileOpened",
+    -- event = "User FileOpened",
     dependencies = "mason.nvim",
   },
   { "tamago324/nlsp-settings.nvim", cmd = "LspSettings", lazy = true },
@@ -33,8 +33,8 @@ local core_plugins = {
         require("mason-registry").refresh()
       end)
     end,
-    event = "User FileOpened",
-    lazy = true,
+    -- event = "User FileOpened",
+    -- lazy = true,
   },
   {
     "folke/tokyonight.nvim",
@@ -54,11 +54,10 @@ local core_plugins = {
       require("lvim.core.telescope").setup()
     end,
     dependencies = { "telescope-fzf-native.nvim" },
-    lazy = true,
     cmd = "Telescope",
     enabled = lvim.builtin.telescope.active,
   },
-  { "nvim-telescope/telescope-fzf-native.nvim", build = "make", lazy = true, enabled = lvim.builtin.telescope.active },
+  { "nvim-telescope/telescope-fzf-native.nvim", build = "make", lazy = true,                                          enabled = lvim.builtin.telescope.active },
   -- Install nvim-cmp, and buffer source as a dependency
   {
     "hrsh7th/nvim-cmp",
@@ -69,17 +68,33 @@ local core_plugins = {
     end,
     event = { "InsertEnter", "CmdlineEnter" },
     dependencies = {
-      "cmp-nvim-lsp",
-      "cmp_luasnip",
-      "cmp-buffer",
+      {"cmp-nvim-lsp", event = "InsertEnter"},
+      {"cmp_luasnip", event = "InsertEnter"},
+      {"cmp-buffer", event = "InsertEnter"},
       "cmp-path",
       "cmp-cmdline",
     },
   },
-  { "hrsh7th/cmp-nvim-lsp",                     lazy = true },
-  { "saadparwaiz1/cmp_luasnip",                 lazy = true },
-  { "hrsh7th/cmp-buffer",                       lazy = true },
-  { "hrsh7th/cmp-path",                         lazy = true },
+  {
+    "hrsh7th/cmp-nvim-lsp",
+    event = { "InsertEnter" },
+  },
+  {
+    "saadparwaiz1/cmp_luasnip",
+    lazy = true,
+    event = { "InsertEnter" },
+  },
+  {
+    "hrsh7th/cmp-buffer",
+    lazy = true,
+    event = { "InsertEnter" }
+  },
+  {
+    "hrsh7th/cmp-path",
+    lazy = true,
+    event = { "InsertEnter" }
+  },
+
   {
     "hrsh7th/cmp-cmdline",
     lazy = true,
@@ -110,7 +125,7 @@ local core_plugins = {
       "friendly-snippets",
     },
   },
-  { "rafamadriz/friendly-snippets", lazy = true, cond = lvim.builtin.luasnip.sources.friendly_snippets },
+  { "rafamadriz/friendly-snippets",             lazy = true,    cond = lvim.builtin.luasnip.sources.friendly_snippets },
   {
     "folke/neodev.nvim",
     lazy = true,
@@ -344,6 +359,7 @@ local core_plugins = {
 
   {
     "lunarvim/onedarker.nvim",
+    event = "VeryLazy",
     branch = "freeze",
     config = function()
       pcall(function()
