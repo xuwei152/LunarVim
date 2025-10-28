@@ -49,7 +49,7 @@ local core_plugins = {
   -- Telescope
   {
     "nvim-telescope/telescope.nvim",
-    branch = "0.1.x",
+    branch = "master",
     config = function()
       require("lvim.core.telescope").setup()
     end,
@@ -102,7 +102,7 @@ local core_plugins = {
   },
   {
     "L3MON4D3/LuaSnip",
-    branch= "master",
+    branch = "master",
     version = "false",
     config = function()
       local utils = require "lvim.utils"
