@@ -190,6 +190,7 @@ local core_plugins = {
   },
   {
     "lewis6991/gitsigns.nvim",
+    version = "false",
     config = function()
       require("lvim.core.gitsigns").setup()
     end,
