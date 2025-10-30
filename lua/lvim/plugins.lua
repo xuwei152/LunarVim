@@ -194,7 +194,7 @@ local core_plugins = {
     config = function()
       require("lvim.core.gitsigns").setup()
     end,
-    -- event = "User FileOpened",
+    event = "User FileOpened",
     cmd = "Gitsigns",
     keys = {"<Space>gs"},
     enabled = lvim.builtin.gitsigns.active,
