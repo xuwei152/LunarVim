@@ -146,6 +146,7 @@ local core_plugins = {
   {
     "nvim-treesitter/nvim-treesitter",
     -- run = ":TSUpdate",
+    version = "false",
     config = function()
       local utils = require "lvim.utils"
       local path = utils.join_paths(get_runtime_dir(), "site", "pack", "lazy", "opt", "nvim-treesitter")
