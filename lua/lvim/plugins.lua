@@ -49,6 +49,7 @@ local core_plugins = {
   -- Telescope
   {
     "nvim-telescope/telescope.nvim",
+    version = "false",
     branch = "master",
     config = function()
       require("lvim.core.telescope").setup()
