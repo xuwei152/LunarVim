@@ -3,6 +3,7 @@ local core_plugins = {
   { "folke/lazy.nvim",              tag = "stable" },
   {
     "neovim/nvim-lspconfig",
+    version = "false",
     lazy = true,
     dependencies = { "mason-lspconfig.nvim", "nlsp-settings.nvim" },
   },
@@ -21,9 +22,10 @@ local core_plugins = {
     dependencies = "mason.nvim",
   },
   { "tamago324/nlsp-settings.nvim", cmd = "LspSettings", lazy = true },
-  { "nvimtools/none-ls.nvim",       lazy = true },
+  { "nvimtools/none-ls.nvim", version = false,       lazy = true },
   {
     "williamboman/mason.nvim",
+    version = "false",
     config = function()
       require("lvim.core.mason").setup()
     end,
@@ -38,6 +40,7 @@ local core_plugins = {
   },
   {
     "folke/tokyonight.nvim",
+    version = "false",
     lazy = not vim.startswith(lvim.colorscheme, "tokyonight"),
   },
   {
