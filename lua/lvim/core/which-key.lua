@@ -109,7 +109,6 @@ M.config = function()
       g = {
         name = "Git",
         r = { "<cmd>Gitsigns reset_hunk<cr>", "Reset Hunk" },
-        s = { "<cmd>Gitsigns stage_hunk<cr>", "Stage Hunk" },
       },
     },
     mappings = {
