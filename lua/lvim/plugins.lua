@@ -40,7 +40,10 @@ local core_plugins = {
   },
   {
     "folke/tokyonight.nvim",
-    version = false,
+    version = false, -- 跟随 HEAD
+    commit = false, -- 取消上游的 commit 钉死
+    pin = false,   -- 若上游有 pin，也一并取消
+    branch = "main", -- 避免分支错位
     lazy = not vim.startswith(lvim.colorscheme, "tokyonight"),
   },
   {
