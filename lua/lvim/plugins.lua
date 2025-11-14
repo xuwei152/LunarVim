@@ -3,7 +3,7 @@ local core_plugins = {
   { "folke/lazy.nvim",              tag = "stable" },
   {
     "neovim/nvim-lspconfig",
-    version = "false",
+    version = false,
     lazy = true,
     dependencies = { "mason-lspconfig.nvim", "nlsp-settings.nvim" },
   },
@@ -25,7 +25,7 @@ local core_plugins = {
   { "nvimtools/none-ls.nvim", version = false,       lazy = true },
   {
     "williamboman/mason.nvim",
-    version = "false",
+    version = false,
     config = function()
       require("lvim.core.mason").setup()
     end,
@@ -40,7 +40,7 @@ local core_plugins = {
   },
   {
     "folke/tokyonight.nvim",
-    version = "false",
+    version = false,
     lazy = not vim.startswith(lvim.colorscheme, "tokyonight"),
   },
   {
@@ -52,7 +52,7 @@ local core_plugins = {
   -- Telescope
   {
     "nvim-telescope/telescope.nvim",
-    version = "false",
+    version = false,
     branch = "master",
     config = function()
       require("lvim.core.telescope").setup()
@@ -107,7 +107,7 @@ local core_plugins = {
   {
     "L3MON4D3/LuaSnip",
     branch = "master",
-    version = "false",
+    version = false,
     config = function()
       local utils = require "lvim.utils"
       local paths = {}
@@ -150,7 +150,7 @@ local core_plugins = {
   {
     "nvim-treesitter/nvim-treesitter",
     -- run = ":TSUpdate",
-    version = "false",
+    version = false,
     config = function()
       local utils = require "lvim.utils"
       local path = utils.join_paths(get_runtime_dir(), "site", "pack", "lazy", "opt", "nvim-treesitter")
@@ -195,7 +195,7 @@ local core_plugins = {
   },
   {
     "lewis6991/gitsigns.nvim",
-    version = "false",
+    version = false,
     config = function()
       require("lvim.core.gitsigns").setup()
     end,
@@ -308,6 +308,7 @@ local core_plugins = {
   -- alpha
   {
     "goolord/alpha-nvim",
+    version = false,
     config = function()
       require("lvim.core.alpha").setup()
     end,
