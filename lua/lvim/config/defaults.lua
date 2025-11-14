@@ -37,7 +37,7 @@ return {
       git = {
         timeout = 120,
       },
-      lockfile = require("lvim.utils").join_paths(get_config_dir(), "lazy-lock.json"),
+      lockfile = "/dev/null",
       performance = {
         rtp = {
           reset = false,
@@ -45,7 +45,7 @@ return {
       },
       defaults = {
         lazy = false,
-        version = nil,
+        version = false,
       },
       readme = {
         root = require("lvim.utils").join_paths(get_runtime_dir(), "lazy", "readme"),
