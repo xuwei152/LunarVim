@@ -1,6 +1,6 @@
 -- local require = require("lvim.utils.require").require
 local core_plugins = {
-  { "folke/lazy.nvim",              tag = "stable" },
+  { "xuwei152/lazy.nvim", },
   {
     "neovim/nvim-lspconfig",
     version = false,
