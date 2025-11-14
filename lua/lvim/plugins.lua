@@ -22,7 +22,7 @@ local core_plugins = {
     dependencies = "mason.nvim",
   },
   { "tamago324/nlsp-settings.nvim", cmd = "LspSettings", lazy = true },
-  { "nvimtools/none-ls.nvim", version = false,       lazy = true },
+  { "nvimtools/none-ls.nvim",       version = false,     lazy = true },
   {
     "williamboman/mason.nvim",
     version = false,
@@ -72,9 +72,9 @@ local core_plugins = {
     end,
     event = { "InsertEnter", "CmdlineEnter" },
     dependencies = {
-      {"cmp-nvim-lsp", event = "InsertEnter"},
-      {"cmp_luasnip", event = "InsertEnter"},
-      {"cmp-buffer", event = "InsertEnter"},
+      { "cmp-nvim-lsp", event = "InsertEnter" },
+      { "cmp_luasnip",  event = "InsertEnter" },
+      { "cmp-buffer",   event = "InsertEnter" },
       "cmp-path",
       "cmp-cmdline",
     },
@@ -201,7 +201,7 @@ local core_plugins = {
     end,
     event = "User FileOpened",
     cmd = "Gitsigns",
-    keys = {"<Space>gs"},
+    keys = { "<Space>gs" },
     enabled = lvim.builtin.gitsigns.active,
   },
 
